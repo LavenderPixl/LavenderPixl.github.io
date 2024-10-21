@@ -1,35 +1,62 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+:root {
+    --color-background: #DAD7CD;
+    --color-text: #3A5A40;
+    --color-darkText: #344E41;
+    --header-size: 36px;
+    --font-size: 20px;
+    --smaller-size: 16px;
+
+    --border-colors: #3A5A40;
+    --outline-color: #3A5A40;
+    --outline-width: 1px;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+#app {
+    /*max-width: 1280px;*/
+    /*margin: 0 auto;*/
+    /*padding: 0rem;*/
+    font-weight: normal;
+    font-family: "Inter", serif;
 }
+
+/*a,*/
+/*.green {*/
+/*    text-decoration: none;*/
+/*    color: var(--color-text);*/
+/*    transition: 0.4s;*/
+/*    padding: 3px;*/
+/*}*/
 
 @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+    a:hover {
+        text-decoration-line: underline;
+    }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/*body {*/
+/*    display: flex;*/
+/*    place-items: center;*/
+/*}*/
+
+#app {
+    height: 100vh;
+    background-image: url("@/assets/squiggles.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
 }
+
+body {
+    margin: 0;
+    color: var(--color-text);
+    background: var(--color-background);
+    font-size: var(--font-size);
+    transition: color 0.5s,
+    background-color 0.5s;
+    text-rendering: optimizeLegibility;
+}
+
