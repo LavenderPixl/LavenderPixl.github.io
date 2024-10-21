@@ -38,7 +38,6 @@
 
   height: 27vh;
   width: 65vh;
-  //min-height: 230px;
   padding: 2vh;
 }
 
@@ -77,7 +76,6 @@ img {
   border: 2px solid #3a5a40;
   align-self: flex-end;
   width: 25vh;
-  //min-height: 50px;
   line-height: 4vh;
   text-align: center;
   text-decoration-line: underline;
@@ -89,50 +87,3 @@ img {
 }
 
 </style>
-
-<!--
-.container {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #3a5a40;
-  background-color: #dad7cd;
-  min-height: 21vh;
-  height: 23vh;
-  padding: 2vh;
-}
-
-.title {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.technologies {
-  margin-top: 70px;
-}
-
-.imgs {
-  margin-top: 1vh;
-}
-
-img {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.projectLink {
-  background: #A3B18A;
-  border: 2px solid #3a5a40;
-  //align-self: flex-end;
-  width: 220px;
-  min-height: 50px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration-line: underline;
-}
--->
-

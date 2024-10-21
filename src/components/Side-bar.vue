@@ -23,7 +23,6 @@ export default {
   flex-direction: column;
   display: flex;
   align-items: center;
-  //margin: auto 0;
 }
 
 p {
@@ -40,7 +39,6 @@ img {
   background-color: #dad7cd;
   width: 5vh;
   padding: 1vh;
-  //padding: 0 15px 0 15px;
   border: 2px solid #3a5a40;
 }
 </style>
