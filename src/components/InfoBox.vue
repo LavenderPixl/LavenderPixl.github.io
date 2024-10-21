@@ -36,7 +36,7 @@
   border: 2px solid #3a5a40;
   background-color: #dad7cd;
 
-  height: 27vh;
+  height: 28vh;
   width: 65vh;
   padding: 2vh;
 }
@@ -68,6 +68,8 @@ p {
 }
 
 img {
+  padding-top: 1vh;
+  padding-right: 1vh;
   height: 5vh;
 }
 
@@ -79,6 +81,7 @@ img {
   line-height: 4vh;
   text-align: center;
   text-decoration-line: underline;
+  margin-top: -3vh;
 }
 
 .projectLink a {
