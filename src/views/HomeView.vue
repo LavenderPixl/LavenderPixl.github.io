@@ -1,22 +1,30 @@
-<script setup>
+<script>
 import Sidebar from '@/components/Side-bar.vue'
 import InfoBox from '@/components/InfoBox.vue'
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  components: { InfoBox, Sidebar },
+})
 </script>
 
 <template>
   <div class="container">
-    <InfoBox class="infobox" />
-    <Sidebar class="sidebar" />
+    <div class="infobox">
+      <InfoBox/>
+    </div>
+    <Sidebar class="sidebar"/>
   </div>
 </template>
 
 <style scoped>
-
 .container {
   display: flex;
 }
+
 .infobox {
-  align-self: center;
+  margin-top: 20vh;
+  margin-left: 50vh;
 }
 
 .sidebar {

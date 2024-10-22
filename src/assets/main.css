@@ -14,32 +14,15 @@
 }
 
 #app {
-    /*max-width: 1280px;*/
-    /*margin: 0 auto;*/
-    /*padding: 0rem;*/
     font-weight: normal;
     font-family: "Inter", serif;
 }
-
-/*a,*/
-/*.green {*/
-/*    text-decoration: none;*/
-/*    color: var(--color-text);*/
-/*    transition: 0.4s;*/
-/*    padding: 3px;*/
-/*}*/
 
 @media (hover: hover) {
     a:hover {
         text-decoration-line: underline;
     }
 }
-
-
-/*body {*/
-/*    display: flex;*/
-/*    place-items: center;*/
-/*}*/
 
 #app {
     height: 100vh;

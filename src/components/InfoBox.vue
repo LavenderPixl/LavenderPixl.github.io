@@ -1,4 +1,4 @@
-<script setup></script>
+<script ></script>
 
 <template>
   <div class="container">
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="projectLink">
-      <a> Check out my Projects!</a>
+      <RouterLink to="/projects"> Check out my Projects! </RouterLink>
     </div>
   </div>
 </template>
@@ -42,7 +42,6 @@
 }
 
 .titles {
-  flex-basis: 100%;
   flex-direction: column;
 }
 
@@ -80,13 +79,13 @@ img {
   width: 25vh;
   line-height: 4vh;
   text-align: center;
-  text-decoration-line: underline;
   margin-top: -3vh;
 }
 
 .projectLink a {
+  text-decoration-line: underline;
   font-size: 2vh;
-  width: 20vh;
+  color: #3A5A40;
 }
 
 </style>
