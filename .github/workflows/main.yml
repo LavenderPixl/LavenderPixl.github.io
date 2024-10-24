@@ -19,6 +19,6 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      run: npm deploy
+      run: npm run deploy
       env:
         GITHUB_TOKEN: ${{ secrets.VITE_GTOKEN }}
