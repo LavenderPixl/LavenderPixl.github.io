@@ -32,6 +32,7 @@ export default {
 
 <style scoped>
 .container {
+  cursor: pointer;
   background: var(--color-background);
   border: var(--border-color) 2px solid;
   display: flex;

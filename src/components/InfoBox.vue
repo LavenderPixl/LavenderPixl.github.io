@@ -1,29 +1,29 @@
-<script ></script>
+<script></script>
 
 <template>
   <div class="container">
     <div class="titles">
       <p class="title">Hi, I'm Anna!</p>
       <p class="title">A Data-technician student.</p>
-      <p> Located in Aalborg, DK </p>
+      <p>Located in Aalborg, DK</p>
     </div>
     <div class="technologies">
       <p>Technologies</p>
       <div class="imgs">
-        <img src="../assets/c-sharp.png" alt="C#"/>
+        <img src="../assets/c-sharp.png" alt="C#" />
         <!--<a href="https://www.flaticon.com/free-icons/c-sharp" title="c sharp icons">C sharp icons created by manshagraphics - Flaticon</a>-->
-        <img src="../assets/python.png" alt="Python"/>
+        <img src="../assets/python.png" alt="Python" />
         <!--<a href="https://www.flaticon.com/free-icons/python" title="python icons">Python icons created by Nadiinko - Flaticon</a>-->
-        <img src="../assets/sql-server.png" alt="SQL"/>
+        <img src="../assets/sql-server.png" alt="SQL" />
         <!--<a href="https://www.flaticon.com/free-icons/sql" title="sql icons">Sql icons created by juicy_fish - Flaticon</a>-->
-        <img src="../assets/docker.png" alt="Docker"/>
+        <img src="../assets/docker.png" alt="Docker" />
         <!--<a href="https://www.flaticon.com/free-icons/docker" title="docker icons">Docker icons created by Afian Rochmah Afif - Flaticon</a>-->
-        <img src="../assets/javascript.png" alt="JavaScript"/>
+        <img src="../assets/javascript.png" alt="JavaScript" />
         <!--<a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by UIUX Mall - Flaticon</a>-->
       </div>
     </div>
     <div class="projectLink">
-      <RouterLink to="/projects"> Check out my Projects! </RouterLink>
+      <RouterLink to="/projects"> Check out my Projects!</RouterLink>
     </div>
   </div>
 </template>
@@ -73,7 +73,7 @@ img {
 }
 
 .projectLink {
-  background: #A3B18A;
+  background: #a3b18a;
   border: 2px solid #3a5a40;
   align-self: flex-end;
   width: 25vh;
@@ -85,7 +85,6 @@ img {
 .projectLink a {
   text-decoration-line: underline;
   font-size: 2vh;
-  color: #3A5A40;
+  color: #3a5a40;
 }
-
 </style>
