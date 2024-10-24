@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy to GitHub Pages
       run: |
-        git remote set-url origin https://git:${VITE_GTOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         npm run deploy -- -u "LavenderPixl <annajacobsen1999@hotmail.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.VITE_GTOKEN }}
