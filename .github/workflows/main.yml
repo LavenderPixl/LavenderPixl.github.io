@@ -19,6 +19,8 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      run: npm run deploy
+      run: |
+        git remote set-url origin https://git:${VITE_GTOKEN}@github.com/lavenderpixl.github.io.git
+        npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.VITE_GTOKEN }}
