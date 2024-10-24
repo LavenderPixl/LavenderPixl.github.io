@@ -28,6 +28,7 @@ export default defineComponent({
 }
 
 .sidebar {
+  width: 10%;
   height: 100%;
   position: fixed;
   top: 40%;
