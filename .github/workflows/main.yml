@@ -12,6 +12,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Install VITE
+      run: npm install
+
     - name: Build project
       run: npm run build
       env:
