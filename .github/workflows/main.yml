@@ -14,6 +14,8 @@ jobs:
 
     - name: Build project
       run: npm run build
+      env:
+        GITHUB_TOKEN: ${{ secrets.VITE_GTOKEN }}
 
     - name: Deploy to GitHub Pages
       run: |
@@ -22,5 +24,3 @@ jobs:
         git add .
         git commit -m "Automated deployment"
         git push origin gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.VITE_GTOKEN }}
