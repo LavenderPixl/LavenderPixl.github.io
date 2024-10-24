@@ -23,6 +23,5 @@ jobs:
         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         npm run deploy -- -u "LavenderPixl <annajacobsen1999@hotmail.com>"
       env:
-        GITHUB_TOKEN: |
-          ${{ secrets.GITHUB_TOKEN }}
-          ${{ secrets.VITE_GTOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        VITE_GTOKEN: ${{ secrets.VITE_GTOKEN }}
