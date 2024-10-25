@@ -30,7 +30,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use only GITHUB_TOKEN for deployment authentication
       run: |
-        git config --global user.email "annajacobsen1999@hotmail.com"
-        git config --global user.name "LavenderPixl"
+        
+        git config --global user.name "${{ github.actor }}" 
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"  
         npm install -g gh-pages
         gh-pages -d dist
