@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-    - main
+    - testing
 
 jobs:
   deploy:
@@ -12,11 +12,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install VITE
-      run: npm install
-
-    - name: Build project
-      run: npm run build
+#    - name: Install VITE
+#      run: npm install
 
     - name: Deploy to GitHub Pages
       run: |
@@ -24,3 +21,5 @@ jobs:
         npm run deploy -- -u "LavenderPixl <annajacobsen1999@hotmail.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+            gh api /users/LavenderPixl/repos
