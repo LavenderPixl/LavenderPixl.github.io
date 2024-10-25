@@ -25,12 +25,7 @@ export default {
   methods: {
     async getRepos() {
       await axios
-        .get('https://api.github.com/users/LavenderPixl/repos', {
-          headers: {
-            'User-Agent': 'LavenderPixl',
-            Authorization: `Bearer ${import.meta.env.GITHUB_TOKEN}`,
-          },
-        })
+        .get('https://api.github.com/users/LavenderPixl/repos')
         .then(res => {
           // const projects = res.json
           for (let project of res.data) {
