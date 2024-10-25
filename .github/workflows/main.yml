@@ -12,8 +12,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-#    - name: Install VITE
-#      run: npm install
+    - name: Install VITE
+      run: npm install
 
     - name: Deploy to GitHub Pages
       run: |
