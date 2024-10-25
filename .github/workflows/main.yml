@@ -26,3 +26,4 @@ jobs:
         npm run deploy -- -u "LavenderPixl <annajacobsen1999@hotmail.com>"
       env:
         VITE_GTOKEN: ${{ secrets.VITE_GTOKEN }}
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
