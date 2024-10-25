@@ -11,27 +11,44 @@ export default defineComponent({
 <template>
   <div class="container">
     <div class="infobox">
-      <InfoBox/>
+      <InfoBox />
     </div>
-    <Sidebar class="sidebar"/>
+    <Sidebar class="sidebar" />
   </div>
 </template>
 
 <style scoped>
 .container {
-  display: flex;
+  //display: flex;
 }
 
 .infobox {
-  margin-top: 20vh;
-  margin-left: 50vh;
+  margin: 10vw 4vw 0 4vw;
+
+  //display: flex;
 }
 
 .sidebar {
-  width: 10%;
-  height: 100%;
   position: fixed;
-  top: 40%;
   right: 0;
+  top: 65%;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+
+  .infobox {
+    margin-top: 20vh;
+    margin-left: 50vh;
+  }
+
+  .sidebar {
+    height: 100%;
+    position: fixed;
+    top: 40%;
+    right: 0;
+  }
 }
 </style>

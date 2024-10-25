@@ -37,30 +37,49 @@ export default {
 
 <style scoped>
 .container {
-  flex-direction: column;
-  display: flex;
   align-items: center;
 }
 
-a {
-
-}
-
 p {
-  font-size: 2vh;
+  font-size: 3.5vw;
   margin: 0;
 }
-
 img {
-  height: 5vh;
-  margin-top: 1vh;
+  height: 9vw;
+  margin-top: 2vw;
 }
 
 .imgs {
   cursor: pointer;
   background-color: #dad7cd;
-  width: 5vh;
-  padding: 1vh;
+  width: 9vw;
+  padding: 2vw;
   border: 2px solid #3a5a40;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    font-size: 2vh;
+    margin: 0;
+  }
+
+  img {
+    height: 5vh;
+    margin-top: 1vh;
+  }
+
+  .imgs {
+    cursor: pointer;
+    background-color: #dad7cd;
+    width: 5vh;
+    padding: 1vh;
+    border: 2px solid #3a5a40;
+  }
 }
 </style>

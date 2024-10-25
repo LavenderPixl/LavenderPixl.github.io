@@ -28,7 +28,7 @@ export default {
         .get('https://api.github.com/users/LavenderPixl/repos', {
           headers: {
             'User-Agent': 'LavenderPixl',
-            Authorization: `Bearer ${import.meta.env.GITHUB_TOKEN}`,
+            Authorization: `Bearer ${import.meta.env.VITE_GTOKEN}`,
           },
         })
         .then(res => {

@@ -4,7 +4,7 @@
   <div class="container">
     <div class="titles">
       <p class="title">Hi, I'm Anna!</p>
-      <p class="title">A Data-technician student.</p>
+      <p class="secondTitle">A Data-technician student.</p>
       <p>Located in Aalborg, DK</p>
     </div>
     <div class="technologies">
@@ -36,9 +36,8 @@
   border: 2px solid #3a5a40;
   background-color: #dad7cd;
 
-  height: 28vh;
-  width: 65vh;
-  padding: 2vh;
+  height: 50vw;
+  padding: 3vw;
 }
 
 .titles {
@@ -46,30 +45,36 @@
 }
 
 .title {
-  font-size: 4vh;
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.secondTitle {
+  font-size: 5vw;
   font-weight: bold;
 }
 
 p {
-  font-size: 2.5vh;
+  font-size: 5vw;
   margin: 0;
   padding: 0;
 }
 
 .technologies {
-  padding-top: 7vh;
+  padding-top: 7vw;
   flex-direction: column;
 }
 
 .imgs {
   flex-direction: row;
-  padding-bottom: 1vh;
+  //justify-content: center;
+  padding-bottom: 1vw;
 }
 
 img {
-  padding-top: 1vh;
-  padding-right: 1vh;
-  height: 5vh;
+  //padding-top: 1vw;
+  //padding-right: 1vw;
+  height: 13vw;
 }
 
 .projectLink {
@@ -86,5 +91,66 @@ img {
   text-decoration-line: underline;
   font-size: 2vh;
   color: #3a5a40;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    border: 2px solid #3a5a40;
+    background-color: #dad7cd;
+
+    height: 28vh;
+    width: 65vh;
+    padding: 2vh;
+  }
+
+  .titles {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 4vh;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .technologies {
+    padding-top: 7vh;
+    flex-direction: column;
+  }
+
+  .imgs {
+    flex-direction: row;
+    padding-bottom: 1vh;
+  }
+
+  img {
+    padding-top: 1vh;
+    padding-right: 1vh;
+    height: 5vh;
+  }
+
+  .projectLink {
+    background: #a3b18a;
+    border: 2px solid #3a5a40;
+    align-self: flex-end;
+    width: 25vh;
+    line-height: 4vh;
+    text-align: center;
+    margin-top: -3vh;
+  }
+
+  .projectLink a {
+    text-decoration-line: underline;
+    font-size: 2vh;
+    color: #3a5a40;
+  }
 }
 </style>
