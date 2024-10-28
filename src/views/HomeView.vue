@@ -19,29 +19,26 @@ export default defineComponent({
 
 <style scoped>
 .container {
-  //display: flex;
 }
 
 .infobox {
-  margin: 10vw 4vw 0 4vw;
-
-  //display: flex;
+  padding: 10vw 4vw 0 4vw;
 }
 
 .sidebar {
   position: fixed;
   right: 0;
-  top: 65%;
+  top: 50%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .container {
     display: flex;
   }
 
   .infobox {
-    margin-top: 20vh;
-    margin-left: 50vh;
+    padding-top: 10vh;
+    padding-left: 40vh;
   }
 
   .sidebar {
