@@ -9,9 +9,9 @@ export default {
   },
   methods: {
     redirect() {
-      window.location.href= this.html_url
-    }
-  }
+      window.location.href = this.html_url
+    },
+  },
 }
 </script>
 
@@ -31,57 +31,59 @@ export default {
 </template>
 
 <style scoped>
-.container {
-  cursor: pointer;
-  background: var(--color-background);
-  border: var(--border-color) 2px solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  padding-left: 1vw;
-  padding-right: 1vw;
-}
+@media only screen and (min-width: 600px) {
+  .container {
+    cursor: pointer;
+    background: var(--color-background);
+    border: var(--border-color) 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
 
-#top {
-  display: flex;
-  flex-direction: column;
-}
+  #top {
+    display: flex;
+    flex-direction: column;
+  }
 
-#name {
-  margin-top: 1vw;
-  margin-bottom: 0;
-  font-size: 1.2vw;
-  text-decoration: underline;
-}
+  #name {
+    margin-top: 1vw;
+    margin-bottom: 0;
+    font-size: 1.2vw;
+    text-decoration: underline;
+  }
 
-#desc {
-  font-size: 1vw;
-  height: 3vw;
-}
+  #desc {
+    font-size: 1vw;
+    height: 3vw;
+  }
 
-#bottom {
-  //height: 3vw;
-  display: flex;
-}
+  #bottom {
+    //height: 3vw;
+    display: flex;
+  }
 
-#bottom p {
-  width: 100%;
-  margin: 0 0 1vw 0;
-  //margin-bottom: 1vw;
-}
+  #bottom p {
+    width: 100%;
+    margin: 0 0 1vw 0;
+    //margin-bottom: 1vw;
+  }
 
-#language {
-  text-align: left;
-  font-size: 1vw;
-}
+  #language {
+    text-align: left;
+    font-size: 1vw;
+  }
 
-#date {
-  text-align: right;
-  font-size: 1vw;
-}
+  #date {
+    text-align: right;
+    font-size: 1vw;
+  }
 
-a {
-  text-decoration-line: none;
-  color: var(--color-text);
+  a {
+    text-decoration-line: none;
+    color: var(--color-text);
+  }
 }
 </style>

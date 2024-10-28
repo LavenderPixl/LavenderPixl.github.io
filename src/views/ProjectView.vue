@@ -7,7 +7,7 @@ export default {
   data() {
     return {
       currentPage: 1,
-      // displaying: 9,
+      maxPage: 1,
       repos: [],
       repo: {
         name: '',
@@ -25,9 +25,13 @@ export default {
   methods: {
     async getRepos() {
       await axios
-        .get('https://api.github.com/users/LavenderPixl/repos')
+        .get('https://api.github.com/users/LavenderPixl/repos', {
+          headers: {
+            'User-Agent': 'LavenderPixl',
+            Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`,
+          },
+        })
         .then(res => {
-          // const projects = res.json
           for (let project of res.data) {
             this.repos.push(project)
           }
@@ -38,6 +42,8 @@ export default {
           this.repos.reverse()
 
           this.displaying = this.repos.slice(0, 9)
+          this.maxPage = (this.repos.length / 9)
+          this.maxPage = Math.ceil(this.maxPage)
         })
     },
 
@@ -85,72 +91,121 @@ export default {
     </div>
     <div id="pager">
       <button @click="pager('-')" id="btn">&lt;</button>
-      <p id="pageNumber">{{ this.currentPage }}</p>
+      <p id="pageNumber">{{ this.currentPage }} / {{this.maxPage}} </p>
       <button @click="pager('+')" id="btn">&gt;</button>
     </div>
   </div>
 </template>
 
 <style>
-#wrapper {
+
+#wrapper{
   width: 100%;
   display: flex;
-  overflow: scroll;
   flex-direction: column;
 }
 
-#topBar {
+#topBar{
   width: 100%;
-  margin-top: 2vw;
-  margin-bottom: 1vw;
-  font-size: 1vw;
-  display: flex;
-  flex-direction: row;
+  padding-top: 3vw;
 }
 
 #topLine {
-  width: 100%;
-  margin-top: 0;
+  padding-top: 3vw;
 }
 
 #back {
-  width: 70%;
   color: var(--color-text);
+  font-size: 4vw;
   margin-left: 2%;
-  text-decoration: underline;
-}
-.repos {
-  justify-content: center;
-  display: grid;
-  grid-template-columns: 25vw 25vw 25vw;
-  column-gap: 4vw;
-  grid-template-rows: 10vw 10vw 10vw;
-  row-gap: 4vw;
+  text-decoration: none;
 }
 
 #pager {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 2vw;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 3vw;
 }
 
 #btn {
-  height: 1.5vw;
-  width: 3vw;
-  font-size: 1vw;
+  height: 10vw;
+  width: 10vw;
+  font-size: 5vw;
   border: var(--border-color) 2px solid;
   background-color: #a3b18a;
   cursor: pointer;
 }
 
 #pageNumber {
-  margin-left: 1vw;
-  margin-right: 0.4vw;
-  margin-top: 0;
-  font-size: 1vw;
-  width: 1vw;
+  margin-left: 5vw;
+  margin-right: 6vw;
+  margin-top: 1vw;
+  font-size: 5vw;
   text-decoration: underline;
-  //margin: 0;
+}
+@media only screen and (min-width: 600px) {
+  #wrapper {
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+  }
+
+  #topBar {
+    padding: 0;
+    font-size: 1vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #topLine {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 2vw;
+  }
+
+  #back {
+    width: 70%;
+    color: var(--color-text);
+    margin-left: 2%;
+    padding-top: 1vw;
+    text-decoration: underline;
+  }
+
+  .repos {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw;
+    column-gap: 4vw;
+    grid-template-rows: 10vw 10vw 10vw;
+    row-gap: 4vw;
+  }
+
+  #pager {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  #btn {
+    height: 2vw;
+    width: 3vw;
+    font-size: 1vw;
+    border: var(--border-color) 2px solid;
+    background-color: #a3b18a;
+    cursor: pointer;
+  }
+
+  #pageNumber {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0.3vw;
+    font-size: 1vw;
+    text-decoration: underline;
+  }
 }
 </style>
