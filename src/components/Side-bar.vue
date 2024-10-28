@@ -44,6 +44,7 @@ p {
   font-size: 3.5vw;
   margin: 0;
 }
+
 img {
   height: 9vw;
   margin-top: 2vw;
@@ -65,20 +66,21 @@ img {
   }
 
   p {
-    font-size: 2vh;
+    font-size: 1vw;
     margin: 0;
   }
 
   img {
-    height: 5vh;
-    margin-top: 1vh;
+    height: 3vw;
+    margin-top: 1vw;
   }
 
   .imgs {
     cursor: pointer;
     background-color: #dad7cd;
-    width: 5vh;
-    padding: 1vh;
+    width: 3vw;
+    margin: 0;
+    padding: 0 0.5vw;
     border: 2px solid #3a5a40;
   }
 }

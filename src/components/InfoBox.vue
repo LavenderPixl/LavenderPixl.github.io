@@ -1,14 +1,14 @@
 <script></script>
 
 <template>
-  <div class="container">
+  <div id="con">
     <div class="titles">
       <p class="title">Hi, I'm Anna!</p>
       <p class="secondTitle">A Data-technician student.</p>
       <p>Located in Aalborg, DK</p>
     </div>
     <div class="technologies">
-      <p>Technologies</p>
+      <p id="pTech">Technologies</p>
       <div class="imgs">
         <img src="../assets/c-sharp.png" alt="C#" />
         <!--<a href="https://www.flaticon.com/free-icons/c-sharp" title="c sharp icons">C sharp icons created by manshagraphics - Flaticon</a>-->
@@ -18,7 +18,7 @@
         <!--<a href="https://www.flaticon.com/free-icons/sql" title="sql icons">Sql icons created by juicy_fish - Flaticon</a>-->
         <img src="../assets/docker.png" alt="Docker" />
         <!--<a href="https://www.flaticon.com/free-icons/docker" title="docker icons">Docker icons created by Afian Rochmah Afif - Flaticon</a>-->
-        <img src="../assets/javascript.png" alt="JavaScript" />
+        <img id="js" src="../assets/javascript.png" alt="JavaScript" />
         <!--<a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by UIUX Mall - Flaticon</a>-->
       </div>
     </div>
@@ -29,14 +29,15 @@
 </template>
 
 <style scoped>
-.container {
+/*PHONE*/
+#con {
   display: flex;
   flex-direction: column;
   justify-content: left;
   border: 2px solid #3a5a40;
   background-color: #dad7cd;
 
-  height: 50vw;
+  height: 55vw;
   padding: 3vw;
 }
 
@@ -61,30 +62,34 @@ p {
 }
 
 .technologies {
-  padding-top: 7vw;
+  padding-top: 11vw;
   flex-direction: column;
 }
 
 .imgs {
+  margin-top: 1vw;
   flex-direction: row;
-  //justify-content: center;
   padding-bottom: 1vw;
 }
 
 img {
-  //padding-top: 1vw;
-  //padding-right: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
   height: 13vw;
+}
+
+#js {
+  padding-right: 0;
 }
 
 .projectLink {
   background: #a3b18a;
   border: 2px solid #3a5a40;
-  align-self: flex-end;
+  align-self: center;
+  padding: 1vw;
   width: 25vh;
   line-height: 4vh;
   text-align: center;
-  margin-top: -3vh;
 }
 
 .projectLink a {
@@ -93,17 +98,18 @@ img {
   color: #3a5a40;
 }
 
-@media only screen and (min-width: 768px) {
-  .container {
+/*PC*/
+@media only screen and (min-width: 600px) {
+  #con {
     display: flex;
     flex-direction: column;
     justify-content: left;
     border: 2px solid #3a5a40;
     background-color: #dad7cd;
 
-    height: 28vh;
-    width: 65vh;
-    padding: 2vh;
+    height: 15vw;
+    width: 35vw;
+    padding: 1vw;
   }
 
   .titles {
@@ -111,45 +117,48 @@ img {
   }
 
   .title {
-    font-size: 4vh;
+    font-size: 2vw;
+    font-weight: bold;
+  }
+
+  .secondTitle {
+    font-size: 1.7vw;
     font-weight: bold;
   }
 
   p {
-    font-size: 2.5vh;
+    font-size: 1.2vw;
     margin: 0;
     padding: 0;
   }
 
   .technologies {
-    padding-top: 7vh;
+    padding-top: 4.3vw;
     flex-direction: column;
   }
 
   .imgs {
     flex-direction: row;
-    padding-bottom: 1vh;
   }
 
   img {
-    padding-top: 1vh;
-    padding-right: 1vh;
-    height: 5vh;
+    padding: 0 0.5vw 0 0;
+    height: 3vw;
   }
 
   .projectLink {
     background: #a3b18a;
     border: 2px solid #3a5a40;
-    align-self: flex-end;
-    width: 25vh;
-    line-height: 4vh;
+    width: 15vw;
+    padding: 0.5vw 0;
     text-align: center;
-    margin-top: -3vh;
+    margin-top: -2.5vw;
+    margin-left: 30vw;
   }
 
   .projectLink a {
     text-decoration-line: underline;
-    font-size: 2vh;
+    font-size: 1vw;
     color: #3a5a40;
   }
 }
