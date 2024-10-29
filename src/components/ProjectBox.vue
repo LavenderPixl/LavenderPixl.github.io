@@ -31,6 +31,65 @@ export default {
 </template>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background: var(--color-background);
+  border: var(--border-color) 2px solid;
+  justify-content: left;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  height: 35vw;
+  width: 80vw;
+}
+
+#top {
+  display: flex;
+  flex-direction: column;
+}
+
+#name {
+  margin-top: 1vw;
+  margin-bottom: 0;
+  font-size: 5vw;
+  text-decoration: underline;
+}
+
+#desc {
+  margin-top: 2vw;
+  margin-bottom: 0;
+  height: 20vw;
+  font-size: 4vw;
+}
+
+#bottom {
+  height: 5vw;
+  display: flex;
+  flex-direction: row;
+}
+
+#bottom p {
+  width: 100%;
+}
+
+#language {
+  margin: 0;
+  text-align: left;
+  font-size: 3.5vw;
+}
+
+#date {
+  margin: 0;
+  text-align: right;
+  font-size: 3.5vw;
+}
+
+a {
+  text-decoration-line: none;
+  color: var(--color-text);
+}
+
 @media only screen and (min-width: 600px) {
   .container {
     cursor: pointer;

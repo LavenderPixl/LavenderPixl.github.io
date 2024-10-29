@@ -18,9 +18,6 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.container {
-}
-
 .infobox {
   padding: 10vw 4vw 0 4vw;
 }

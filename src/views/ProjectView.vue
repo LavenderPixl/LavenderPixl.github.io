@@ -1,12 +1,14 @@
 <script>
 import ProjectBox from '@/components/ProjectBox.vue'
 import axios from 'axios'
+import ProjectSideBar from '@/components/Project-SideBar.vue'
 
 export default {
-  components: { ProjectBox },
+  components: { ProjectSideBar, ProjectBox },
   data() {
     return {
       currentPage: 1,
+      amountShown: 9,
       maxPage: 1,
       repos: [],
       repo: {
@@ -23,6 +25,14 @@ export default {
     await this.getRepos()
   },
   methods: {
+    isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      )
+        ? (this.amountShown = 3)
+        : (this.amountShown = 9)
+    },
+
     async getRepos() {
       await axios
         .get('https://api.github.com/users/LavenderPixl/repos', {
@@ -41,9 +51,9 @@ export default {
           )
           this.repos.reverse()
 
-          this.displaying = this.repos.slice(0, 9)
-          this.maxPage = (this.repos.length / 9)
-          this.maxPage = Math.ceil(this.maxPage)
+          this.isMobile()
+          this.displaying = this.repos.slice(0, this.amountShown)
+          this.maxPage = Math.ceil(this.repos.length / this.amountShown)
         })
     },
 
@@ -54,16 +64,19 @@ export default {
           this.currentPage--
         } else return
       }
-      if (btnClicked === '+' && this.currentPage < this.repos.length / 9) {
+      if (
+        btnClicked === '+' &&
+        this.currentPage < this.repos.length / this.amountShown
+      ) {
         this.displaying.pop()
         this.currentPage++
       }
 
       let start = this.getStart()
-      this.displaying = this.repos.slice(start, start + 9)
+      this.displaying = this.repos.slice(start, start + this.amountShown)
     },
     getStart() {
-      let start = (this.currentPage - 1) * 9
+      let start = (this.currentPage - 1) * this.amountShown
       Math.round(start)
       return start
     },
@@ -73,13 +86,14 @@ export default {
 
 <template>
   <div id="wrapper">
-    <!--    <SideBar />-->
     <div id="topBar">
       <RouterLink to="/" id="back"> &lt; Back to Home</RouterLink>
-      <p id="topLine">Click a project to view it on Github.</p>
+      <Project-SideBar id="bar" />
     </div>
+    <p id="topLine">Click a project to view it on Github.</p>
     <div class="repos">
       <ProjectBox
+        id="projectBox"
         v-for="(repo, index) in displaying"
         :key="index"
         :name="repo.name"
@@ -91,41 +105,67 @@ export default {
     </div>
     <div id="pager">
       <button @click="pager('-')" id="btn">&lt;</button>
-      <p id="pageNumber">{{ this.currentPage }} / {{this.maxPage}} </p>
+      <p id="pageNumber">{{ this.currentPage }} / {{ this.maxPage }}</p>
       <button @click="pager('+')" id="btn">&gt;</button>
     </div>
   </div>
 </template>
 
 <style>
-
-#wrapper{
+#wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-#topBar{
+#topBar {
+  border-bottom: 4px dotted #3a5a40;
+  background-color: #dad7cd;
   width: 100%;
-  padding-top: 3vw;
-}
-
-#topLine {
-  padding-top: 3vw;
+  height: 10vw;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 #back {
+  width: 35%;
+  height: 5vw;
+  padding-top: 2vw;
+  align-self: flex-start;
+  margin-left: 2vw;
   color: var(--color-text);
   font-size: 4vw;
-  margin-left: 2%;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+#bar {
+  width: 40%;
+  align-self: flex-end;
+  right: 0;
+  position: fixed;
+}
+
+#topLine {
+  align-self: center;
+  font-size: 5vw;
+}
+
+.repos {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#projectBox {
+  padding-bottom: 15vw;
 }
 
 #pager {
   width: 100%;
   display: flex;
   justify-content: center;
-  position: fixed;
   bottom: 0;
   padding-bottom: 3vw;
 }
@@ -146,6 +186,7 @@ export default {
   font-size: 5vw;
   text-decoration: underline;
 }
+
 @media only screen and (min-width: 600px) {
   #wrapper {
     width: 100%;

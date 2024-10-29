@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p>Contact</p>
+    <p id="contact">Contact</p>
     <div class="imgs">
       <img
         src="../assets/github.png"
@@ -37,24 +37,25 @@ export default {
 
 <style scoped>
 .container {
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-p {
+#contact {
   font-size: 3.5vw;
   margin: 0;
 }
 
 img {
-  height: 9vw;
+  height: 8vw;
   margin-top: 2vw;
 }
 
 .imgs {
+  padding-left: 2vw;
   cursor: pointer;
+  width: 10vw;
   background-color: #dad7cd;
-  width: 9vw;
-  padding: 2vw;
   border: 2px solid #3a5a40;
 }
 
@@ -77,10 +78,10 @@ img {
 
   .imgs {
     cursor: pointer;
-    background-color: #dad7cd;
     width: 3vw;
     margin: 0;
     padding: 0 0.5vw;
+    background-color: #dad7cd;
     border: 2px solid #3a5a40;
   }
 }
