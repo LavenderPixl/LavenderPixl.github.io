@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <p id="contact">Contact</p>
     <div class="imgs">
       <img
         src="../assets/github.png"
@@ -39,47 +38,42 @@ export default {
 .container {
   display: flex;
   flex-direction: row;
-}
-
-#contact {
-  display: none;
-  font-size: 3.5vw;
-  margin: 0;
+  width: 100%;
 }
 
 img {
   height: 8vw;
   margin-right: 5vw;
+  cursor: pointer;
 }
 
 .imgs {
-  cursor: pointer;
-  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .container {
-    flex-direction: column;
     display: flex;
-    align-items: center;
-  }
-
-  p {
-    font-size: 1vw;
-    margin: 0;
+    flex-direction: column;
+    width: 100%;
   }
 
   img {
-    height: 3vw;
+    height: 2.5vw;
+    right: 0;
     margin-top: 1vw;
+    margin-right: 0;
   }
 
   .imgs {
     cursor: pointer;
-    width: 3vw;
+    width: 2.5vw;
     margin: 0;
     padding: 0 0.5vw;
     background-color: #dad7cd;
+    align-items: flex-end;
+    justify-content: flex-end;
     border: 2px solid #3a5a40;
   }
 }

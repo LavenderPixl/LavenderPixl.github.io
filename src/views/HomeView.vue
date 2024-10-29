@@ -28,7 +28,7 @@ export default defineComponent({
   top: 50%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   .container {
     display: flex;
   }
@@ -38,11 +38,11 @@ export default defineComponent({
     padding-left: 40vh;
   }
 
-  .sidebar {
+/*  .sidebar {
     height: 100%;
     position: fixed;
     top: 40%;
     right: 0;
-  }
+  }*/
 }
 </style>

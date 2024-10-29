@@ -59,26 +59,25 @@ img {
   border: 2px solid #3a5a40;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .container {
-    flex-direction: column;
     display: flex;
-    align-items: center;
+    flex-direction: column;
   }
 
-  p {
+  #contact {
     font-size: 1vw;
     margin: 0;
   }
 
   img {
-    height: 3vw;
+    height: 2.5vw;
     margin-top: 1vw;
   }
 
   .imgs {
     cursor: pointer;
-    width: 3vw;
+    width: 2.5vw;
     margin: 0;
     padding: 0 0.5vw;
     background-color: #dad7cd;

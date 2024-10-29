@@ -90,7 +90,7 @@ a {
   color: var(--color-text);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   .container {
     cursor: pointer;
     background: var(--color-background);
@@ -100,6 +100,8 @@ a {
     justify-content: left;
     padding-left: 1vw;
     padding-right: 1vw;
+    width: 20vw;
+    height: 10vw;
   }
 
   #top {
@@ -115,19 +117,19 @@ a {
   }
 
   #desc {
+    margin-top: 0.5vw;
     font-size: 1vw;
-    height: 3vw;
+    height: 5vw;
   }
 
   #bottom {
-    //height: 3vw;
+    height: 1.5vw;
     display: flex;
   }
 
   #bottom p {
     width: 100%;
     margin: 0 0 1vw 0;
-    //margin-bottom: 1vw;
   }
 
   #language {

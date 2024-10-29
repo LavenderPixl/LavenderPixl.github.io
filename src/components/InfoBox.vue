@@ -99,7 +99,7 @@ img {
 }
 
 /*PC*/
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   #con {
     display: flex;
     flex-direction: column;

@@ -88,6 +88,7 @@ export default {
   <div id="wrapper">
     <div id="topBar">
       <RouterLink to="/" id="back"> &lt; Back to Home</RouterLink>
+      <p id="topLinePC">Click a project to view it on Github.</p>
       <Project-SideBar id="bar" />
     </div>
     <p id="topLine">Click a project to view it on Github.</p>
@@ -119,34 +120,45 @@ export default {
 }
 
 #topBar {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: left;
   border-bottom: 4px dotted #3a5a40;
   background-color: #dad7cd;
   width: 100%;
   height: 10vw;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: left;
+  padding-bottom: 4vw;
 }
 
 #back {
   width: 35%;
   height: 5vw;
-  padding-top: 2vw;
+  padding-top: 5vw;
   align-self: flex-start;
   margin-left: 2vw;
-  color: var(--color-text);
   font-size: 4vw;
   text-decoration: underline;
+  color: var(--color-text);
 }
 
 #bar {
+  justify-content: flex-end;
+  margin-left: 23vw;
   width: 40%;
-  align-self: flex-end;
+  margin-top: 4vw;
   right: 0;
-  position: fixed;
+  margin-right: 0;
+  position: relative;
 }
 
 #topLine {
+  margin-top: 10vw;
+  align-self: center;
+  font-size: 5vw;
+}
+
+#topLinePC {
+  display: none;
   align-self: center;
   font-size: 5vw;
 }
@@ -187,33 +199,51 @@ export default {
   text-decoration: underline;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   #wrapper {
     width: 100%;
     display: flex;
-    overflow: scroll;
     flex-direction: column;
   }
 
   #topBar {
-    padding: 0;
-    font-size: 1vw;
     display: flex;
     flex-direction: row;
-  }
-
-  #topLine {
+    justify-content: left;
     width: 100%;
-    margin: 0;
-    padding-bottom: 2vw;
+    height: 4vw;
+    padding: 0;
+    border-bottom: 0;
   }
 
   #back {
-    width: 70%;
-    color: var(--color-text);
-    margin-left: 2%;
+    width: 11%;
+    height: auto;
     padding-top: 1vw;
+    align-self: flex-start;
+    margin-left: 1vw;
+    font-size: 1.3vw;
     text-decoration: underline;
+    color: var(--color-text);
+  }
+
+  #bar {
+    margin-left: 0;
+    width: 3.9%;
+    margin-top: 30vw;
+  }
+
+  #topLine {
+    display: none;
+    align-self: center;
+    font-size: 1.3vw;
+  }
+
+  #topLinePC {
+    width: 58%;
+    display: flex;
+    margin-left: 28vw;
+    font-size: 1.2vw;
   }
 
   .repos {
@@ -225,11 +255,8 @@ export default {
     row-gap: 4vw;
   }
 
-  #pager {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
+  #projectBox {
+    padding-bottom: 0;
   }
 
   #btn {
@@ -245,8 +272,13 @@ export default {
     margin-left: 1vw;
     margin-right: 1vw;
     margin-top: 0.3vw;
-    font-size: 1vw;
+    font-size: 1.3vw;
     text-decoration: underline;
+  }
+
+  #pager {
+    margin-top: 1vw;
+    padding: 0;
   }
 }
 </style>
