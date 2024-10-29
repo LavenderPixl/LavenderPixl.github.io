@@ -35,12 +35,7 @@ export default {
 
     async getRepos() {
       await axios
-        .get('https://api.github.com/users/LavenderPixl/repos', {
-          headers: {
-            'User-Agent': 'LavenderPixl',
-            Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`,
-          },
-        })
+        .get('https://api.github.com/users/LavenderPixl/repos')
         .then(res => {
           for (let project of res.data) {
             this.repos.push(project)
@@ -123,7 +118,7 @@ export default {
   display: inline-flex;
   flex-direction: row;
   justify-content: left;
-  border-bottom: 4px dotted #3a5a40;
+  border-bottom: 4px dotted var(--border-color);
   background-color: #dad7cd;
   width: 100%;
   height: 10vw;
@@ -187,14 +182,14 @@ export default {
   width: 10vw;
   font-size: 5vw;
   border: var(--border-color) 2px solid;
-  background-color: #a3b18a;
+  background-color: var(--btn-color);
   cursor: pointer;
 }
 
 #pageNumber {
-  margin-left: 5vw;
-  margin-right: 6vw;
+  margin-left: 4vw;
   margin-top: 1vw;
+  width: 15vw;
   font-size: 5vw;
   text-decoration: underline;
 }
@@ -264,7 +259,7 @@ export default {
     width: 3vw;
     font-size: 1vw;
     border: var(--border-color) 2px solid;
-    background-color: #a3b18a;
+    background-color: var(--btn-color);
     cursor: pointer;
   }
 
@@ -272,6 +267,7 @@ export default {
     margin-left: 1vw;
     margin-right: 1vw;
     margin-top: 0.3vw;
+    width: auto;
     font-size: 1.3vw;
     text-decoration: underline;
   }

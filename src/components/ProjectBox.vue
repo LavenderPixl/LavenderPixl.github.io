@@ -7,9 +7,15 @@ export default {
     updated_at: String,
     html_url: String,
   },
+  async mounted() {
+    await this.clean()
+  },
   methods: {
     redirect() {
       window.location.href = this.html_url
+    },
+    async clean() {
+      // this.updated_at = this.updated_at.slice(0, 11)
     },
   },
 }
@@ -24,7 +30,7 @@ export default {
       </div>
       <div id="bottom">
         <p id="language">{{ this.language }}</p>
-        <p id="date">{{ this.updated_at }}</p>
+        <p id="date">{{ this.updated_at.slice(0, 10) }}</p>
       </div>
     </div>
   </a>

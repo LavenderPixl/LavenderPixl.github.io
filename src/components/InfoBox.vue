@@ -83,8 +83,8 @@ img {
 }
 
 .projectLink {
-  background: #a3b18a;
-  border: 2px solid #3a5a40;
+  background: var(--btn-color);
+  border: 2px solid var(--border-color);
   align-self: center;
   padding: 1vw;
   width: 25vh;
@@ -95,7 +95,7 @@ img {
 .projectLink a {
   text-decoration-line: underline;
   font-size: 2vh;
-  color: #3a5a40;
+  color: var(--color-text);
 }
 
 /*PC*/
@@ -104,7 +104,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    border: 2px solid #3a5a40;
+    border: 2px solid var(--border-color);
     background-color: #dad7cd;
 
     height: 15vw;
@@ -147,8 +147,8 @@ img {
   }
 
   .projectLink {
-    background: #a3b18a;
-    border: 2px solid #3a5a40;
+    background: var(--btn-color);
+    border: 2px solid var(--border-color);
     width: 15vw;
     padding: 0.5vw 0;
     text-align: center;
@@ -159,7 +159,7 @@ img {
   .projectLink a {
     text-decoration-line: underline;
     font-size: 1vw;
-    color: #3a5a40;
+    color: var(--color-text);
   }
 }
 </style>

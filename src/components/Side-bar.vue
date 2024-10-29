@@ -56,7 +56,7 @@ img {
   cursor: pointer;
   width: 10vw;
   background-color: #dad7cd;
-  border: 2px solid #3a5a40;
+  border: 2px solid var(--border-color);
 }
 
 @media only screen and (min-width: 769px) {
@@ -81,7 +81,7 @@ img {
     margin: 0;
     padding: 0 0.5vw;
     background-color: #dad7cd;
-    border: 2px solid #3a5a40;
+    border: 2px solid var(--border-color);
   }
 }
 </style>
