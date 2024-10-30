@@ -22,7 +22,7 @@
 
 #app {
     height: 100vh;
-    /*background-image: url("@/assets/squiggles.png");*/
+    background-image: url("@/assets/Bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
@@ -33,7 +33,6 @@ body {
     margin: 0;
     color: var(--color-text);
     background: var(--color-background);
-    font-size: var(--font-size);
     transition: color 0.5s,
     background-color 0.5s;
     text-rendering: optimizeLegibility;
