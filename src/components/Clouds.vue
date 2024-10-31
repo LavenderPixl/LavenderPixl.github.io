@@ -21,12 +21,12 @@
 }
 
 #cloud1 {
-  -webkit-animation: animateCloud 40s linear infinite;
-  -moz-animation: animateCloud 40s linear infinite;
-  animation: animateCloud 40s linear infinite;
+  -webkit-animation: animateCloud 35s linear infinite;
+  -moz-animation: animateCloud 35s linear infinite;
+  animation: animateCloud 35s linear infinite;
   position: absolute;
   left: -50vw;
-  bottom: 110vw;
+  bottom: 120vw;
   z-index: -1;
 
   -webkit-transform: scale(0.4);
@@ -35,8 +35,8 @@
 }
 
 #cloud2 {
-  -webkit-animation: animateCloud 35s linear infinite;
-  -moz-animation: animateCloud 35s linear infinite;
+  -webkit-animation: animateCloud 20s linear infinite;
+  -moz-animation: animateCloud 20s linear infinite;
   animation: animateCloud 20s linear infinite;
   position: absolute;
   left: -70vw;
