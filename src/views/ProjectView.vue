@@ -2,9 +2,10 @@
 import ProjectBox from '@/components/ProjectBox.vue'
 import axios from 'axios'
 import ProjectSideBar from '@/components/Project-SideBar.vue'
+import Clouds from '@/components/Clouds.vue'
 
 export default {
-  components: { ProjectSideBar, ProjectBox },
+  components: { ProjectSideBar, Clouds, ProjectBox },
   data() {
     return {
       currentPage: 1,
@@ -80,14 +81,20 @@ export default {
 </script>
 
 <template>
+  <Clouds></Clouds>
   <div id="wrapper">
-    <div id="topBar">
+    <div id="topBar" style="z-index: 10">
       <RouterLink to="/" id="back"> &lt; Back to Home</RouterLink>
       <p id="topLinePC">Click a project to view it on Github.</p>
       <Project-SideBar id="bar" />
     </div>
     <p id="topLine">Click a project to view it on Github.</p>
-    <div class="repos">
+    <div id="pager" style="z-index: 8">
+      <button @click="pager('-')" id="btn">&lt;</button>
+      <p id="pageNumber">{{ this.currentPage }} / {{ this.maxPage }}</p>
+      <button @click="pager('+')" id="btn">&gt;</button>
+    </div>
+    <div class="repos" style="z-index: 8">
       <ProjectBox
         id="projectBox"
         v-for="(repo, index) in displaying"
@@ -99,7 +106,7 @@ export default {
         :html_url="repo.html_url"
       ></ProjectBox>
     </div>
-    <div id="pager">
+    <div id="pager" style="z-index: 8">
       <button @click="pager('-')" id="btn">&lt;</button>
       <p id="pageNumber">{{ this.currentPage }} / {{ this.maxPage }}</p>
       <button @click="pager('+')" id="btn">&gt;</button>
@@ -108,6 +115,7 @@ export default {
 </template>
 
 <style>
+
 #wrapper {
   width: 100%;
   display: flex;
@@ -119,7 +127,7 @@ export default {
   flex-direction: row;
   justify-content: left;
   border-bottom: 4px dotted var(--border-color);
-  background-color: #dad7cd;
+  background-color: var(--color-background);
   width: 100%;
   height: 10vw;
   padding-bottom: 4vw;
@@ -147,9 +155,9 @@ export default {
 }
 
 #topLine {
-  margin-top: 10vw;
+  margin-top: 5vw;
   align-self: center;
-  font-size: 5vw;
+  font-size: 4.5vw;
 }
 
 #topLinePC {
@@ -166,7 +174,8 @@ export default {
 }
 
 #projectBox {
-  padding-bottom: 15vw;
+  padding-top: 4vw;
+  padding-bottom: 10vw;
 }
 
 #pager {
@@ -178,8 +187,8 @@ export default {
 }
 
 #btn {
-  height: 10vw;
-  width: 10vw;
+  height: 8vw;
+  width: 8vw;
   font-size: 5vw;
   border: var(--border-color) 2px solid;
   background-color: var(--btn-color);
@@ -226,6 +235,7 @@ export default {
     margin-left: 0;
     width: 3.9%;
     margin-top: 30vw;
+    z-index: 10;
   }
 
   #topLine {
@@ -243,6 +253,7 @@ export default {
 
   .repos {
     justify-content: center;
+    margin-top: 1vw;
     display: grid;
     grid-template-columns: 25vw 25vw 25vw;
     column-gap: 4vw;

@@ -35,7 +35,7 @@
   flex-direction: column;
   justify-content: left;
   border: 2px solid #3a5a40;
-  background-color: #dad7cd;
+  background-color: var(--color-background);
 
   height: 55vw;
   padding: 3vw;
@@ -90,6 +90,7 @@ img {
   width: 25vh;
   line-height: 4vh;
   text-align: center;
+  z-index: 2;
 }
 
 .projectLink a {
@@ -105,7 +106,7 @@ img {
     flex-direction: column;
     justify-content: left;
     border: 2px solid var(--border-color);
-    background-color: #dad7cd;
+    background-color: var(--color-background);
 
     height: 15vw;
     width: 35vw;

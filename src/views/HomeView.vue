@@ -1,14 +1,16 @@
 <script>
 import Sidebar from '@/components/Side-bar.vue'
 import InfoBox from '@/components/InfoBox.vue'
+import Clouds from '@/components/Clouds.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { InfoBox, Sidebar },
+  components: { InfoBox, Clouds, Sidebar },
 })
 </script>
 
 <template>
+  <Clouds></Clouds>
   <div class="container">
     <div class="infobox">
       <InfoBox />
@@ -38,11 +40,11 @@ export default defineComponent({
     padding-left: 40vh;
   }
 
-/*  .sidebar {
+  .sidebar {
     height: 100%;
     position: fixed;
     top: 40%;
     right: 0;
-  }*/
+  }
 }
 </style>
