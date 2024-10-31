@@ -55,7 +55,7 @@ img {
   padding-left: 2vw;
   cursor: pointer;
   width: 10vw;
-  background-color: #dad7cd;
+  background-color: var(--color-background);
   border: 2px solid var(--border-color);
 }
 
@@ -80,7 +80,7 @@ img {
     width: 2.5vw;
     margin: 0;
     padding: 0 0.5vw;
-    background-color: #dad7cd;
+    background-color: var(--color-background);
     border: 2px solid var(--border-color);
   }
 }

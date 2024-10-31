@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" >
     <div class="imgs">
       <img
         src="../assets/github.png"
@@ -71,10 +71,10 @@ img {
     width: 2.5vw;
     margin: 0;
     padding: 0 0.5vw;
-    background-color: #dad7cd;
+    background-color: var(--color-background);
     align-items: flex-end;
     justify-content: flex-end;
-    border: 2px solid #3a5a40;
+    border: 2px solid var(--border-color);
   }
 }
 </style>

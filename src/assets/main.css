@@ -1,12 +1,12 @@
 :root {
-    --color-background: #DAD7CD;
+    --color-background: #d2d3d6;
     --color-text: black;
     --color-darkText: black;
 
     --border-color: black;
     --outline-color: black;
     --outline-width: 1px;
-    --btn-color: #85758a;
+    --btn-color: #A38FAA;
 }
 
 #app {
