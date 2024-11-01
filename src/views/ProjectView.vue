@@ -268,6 +268,7 @@ export default {
 
   #projectBox {
     margin-bottom: 0;
+    z-index: 1;
   }
 
   #btn {

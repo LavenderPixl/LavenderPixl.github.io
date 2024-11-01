@@ -99,17 +99,16 @@
   }
 
   #cloud1 {
-    -webkit-animation: animateCloud 50s linear infinite;
-    -moz-animation: animateCloud 50s linear infinite;
-    animation: animateCloud 50s linear infinite;
+    -webkit-animation: animateCloud 45s linear infinite;
+    -moz-animation: animateCloud 45s linear infinite;
+    animation: animateCloud 45s linear infinite;
     position: absolute;
     left: -30vw;
-    bottom: 22vw;
-    z-index: -1;
-
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.9);
+    bottom: 19vw;
+    z-index: 0;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
   }
 
   #cloud2 {
@@ -120,23 +119,23 @@
     left: -20vw;
     bottom: 7vw;
 
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    transform: scale(0.7);
   }
 
   #cloud3 {
-    -webkit-animation: animateCloud 50s linear infinite;
-    -moz-animation: animateCloud 50s linear infinite;
-    animation: animateCloud 50s linear infinite;
+    -webkit-animation: animateCloud 55s linear infinite;
+    -moz-animation: animateCloud 55s linear infinite;
+    animation: animateCloud 55s linear infinite;
     position: absolute;
     bottom: 33vw;
     left: -10vw;
     z-index: -1;
 
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
   }
 
   @-webkit-keyframes animateCloud {
