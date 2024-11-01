@@ -89,7 +89,7 @@ export default {
       <Project-SideBar id="bar" />
     </div>
     <p id="topLine">Click a project to view it on Github.</p>
-    <div id="pager" style="z-index: 8">
+    <div id="topPager" style="z-index: 8">
       <button @click="pager('-')" id="btn">&lt;</button>
       <p id="pageNumber">{{ this.currentPage }} / {{ this.maxPage }}</p>
       <button @click="pager('+')" id="btn">&gt;</button>
@@ -115,7 +115,6 @@ export default {
 </template>
 
 <style>
-
 #wrapper {
   width: 100%;
   display: flex;
@@ -174,8 +173,13 @@ export default {
 }
 
 #projectBox {
-  padding-top: 4vw;
-  padding-bottom: 10vw;
+ margin-bottom: 13vw;
+}
+
+#topPager {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3vw;
 }
 
 #pager {
@@ -222,8 +226,9 @@ export default {
 
   #back {
     width: 11%;
-    height: auto;
-    padding-top: 1vw;
+    height: 2vw;
+    margin-top: 1vw;
+    padding-top: 0;
     align-self: flex-start;
     margin-left: 1vw;
     font-size: 1.3vw;
@@ -252,17 +257,17 @@ export default {
   }
 
   .repos {
-    justify-content: center;
     margin-top: 1vw;
+    justify-content: center;
     display: grid;
     grid-template-columns: 25vw 25vw 25vw;
-    column-gap: 4vw;
+    column-gap: 3vw;
     grid-template-rows: 10vw 10vw 10vw;
-    row-gap: 4vw;
+    row-gap: 3vw;
   }
 
   #projectBox {
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   #btn {
@@ -283,8 +288,12 @@ export default {
     text-decoration: underline;
   }
 
+  #topPager {
+    display: none;
+  }
+
   #pager {
-    margin-top: 1vw;
+    margin-top: 2vw;
     padding: 0;
   }
 }

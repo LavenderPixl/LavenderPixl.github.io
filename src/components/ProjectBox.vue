@@ -22,8 +22,8 @@ export default {
 </script>
 
 <template>
-  <a @click="redirect()">
-    <div class="container">
+  <div class="container">
+    <a @click="redirect()">
       <div id="top">
         <p id="name">{{ this.name }}</p>
         <p id="desc">{{ this.description }}</p>
@@ -32,8 +32,8 @@ export default {
         <p id="language">{{ this.language }}</p>
         <p id="date">{{ this.updated_at.slice(0, 10) }}</p>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </template>
 
 <style scoped>

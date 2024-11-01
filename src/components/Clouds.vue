@@ -26,7 +26,7 @@
   animation: animateCloud 35s linear infinite;
   position: absolute;
   left: -50vw;
-  bottom: 120vw;
+  bottom: 125vw;
   z-index: -1;
 
   -webkit-transform: scale(0.4);
@@ -40,7 +40,7 @@
   animation: animateCloud 20s linear infinite;
   position: absolute;
   left: -70vw;
-  bottom: 30vw;
+  bottom: 20vw;
 
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -48,13 +48,12 @@
 }
 
 #cloud3 {
-  -webkit-animation: animateCloud 50s linear infinite;
-  -moz-animation: animateCloud 50s linear infinite;
-  animation: animateCloud 50s linear infinite;
+  -webkit-animation: animateCloud 40s linear infinite;
+  -moz-animation: animateCloud 40s linear infinite;
+  animation: animateCloud 40s linear infinite;
   position: absolute;
-  bottom: 60vw;
+  bottom: 90vw;
   left: -60vw;
-  z-index: -1;
 
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -110,7 +109,7 @@
 
     -webkit-transform: scale(0.4);
     -moz-transform: scale(0.4);
-    transform: scale(0.4);
+    transform: scale(0.9);
   }
 
   #cloud2 {
@@ -123,7 +122,7 @@
 
     -webkit-transform: scale(0.4);
     -moz-transform: scale(0.4);
-    transform: scale(0.4);
+    transform: scale(0.9);
   }
 
   #cloud3 {
@@ -131,13 +130,13 @@
     -moz-animation: animateCloud 50s linear infinite;
     animation: animateCloud 50s linear infinite;
     position: absolute;
-    bottom: 38vw;
+    bottom: 33vw;
     left: -10vw;
     z-index: -1;
 
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.4);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
   }
 
   @-webkit-keyframes animateCloud {
