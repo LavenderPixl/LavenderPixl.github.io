@@ -134,7 +134,7 @@ img {
   }
 
   .technologies {
-    padding-top: 4.3vw;
+    padding-top: 3.8vw;
     flex-direction: column;
   }
 

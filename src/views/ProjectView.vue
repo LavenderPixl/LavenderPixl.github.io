@@ -125,7 +125,7 @@ export default {
   display: inline-flex;
   flex-direction: row;
   justify-content: left;
-  border-bottom: 4px dotted var(--border-color);
+  border-bottom: 0.6vw dashed var(--border-color);
   background-color: var(--color-background);
   width: 100%;
   height: 10vw;
