@@ -52,8 +52,9 @@
   -moz-animation: animateCloud 40s linear infinite;
   animation: animateCloud 40s linear infinite;
   position: absolute;
-  bottom: 90vw;
+  bottom: 75vw;
   left: -60vw;
+
 
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
